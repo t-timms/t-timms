@@ -85,6 +85,15 @@ SQL + Python ETL pipeline for semiconductor quality analysis.
 - Defect Pareto distributions, yield rate dashboards
 - Automated alerting on quality threshold breaches
 
+### [Tesla Tire Wear ML](https://github.com/t-timms/tesla-tire-wear-ml)
+
+Multi-model ML pipeline predicting tire wear for Tesla vehicles. Random Forest, XGBoost, Neural Network, and Ensemble models with Claude AI analysis for tire longevity insights.
+
+- Simulated driving data with vehicle-specific tire degradation modeling
+- GridSearch-tuned Random Forest, XGBoost, and TensorFlow/Keras neural network
+- Ensemble averaging across all models for robust predictions
+- Claude AI integration for natural language tire wear analysis
+
 ### [LLM Wiki](https://github.com/t-timms/llm-wiki)
 
 Git-backed knowledge wiki — Karpathy's LLM Wiki pattern with LangGraph ingestion pipelines for structured and unstructured content. Full diff history.
