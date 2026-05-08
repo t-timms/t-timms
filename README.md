@@ -155,12 +155,6 @@ Git-backed knowledge wiki — Karpathy's LLM Wiki pattern with LangGraph ingesti
   </picture>
 </details>
 
-<details>
-  <summary><b>🏆 GitHub Trophies</b></summary>
-  <br />
-  <img src="https://github-profile-trophy.vercel.app/?username=t-timms&theme=darkhub&no-frame=true&no-bg=true&row=2&column=4" />
-</details>
-
 ---
 
 ## Skills
