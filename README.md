@@ -4,10 +4,7 @@
 
 **LLM Systems Engineer** — Production Inference · Multi-Agent Orchestration · Edge Deployment
 
-*💭 God is the source code*
-
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tremayne-t-/)
-[![Website](https://img.shields.io/badge/-Website-8b5cf6?style=for-the-badge&logo=google-chrome&logoColor=white)](https://omnipotence-eth.github.io)
 [![GitHub](https://img.shields.io/github/followers/t-timms?style=for-the-badge&logo=github&label=Follow&color=2f80ed)](https://github.com/t-timms)
 [![Stars](https://img.shields.io/github/stars/t-timms?style=for-the-badge&logo=github&label=Stars&color=2f80ed)](https://github.com/t-timms?tab=repositories)
 
@@ -171,8 +168,6 @@ Git-backed knowledge wiki — Karpathy's LLM Wiki pattern with LangGraph ingesti
 
 <div align="center">
 
-**Tremayne Timms** · [GitHub](https://github.com/t-timms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/) · [Website](https://omnipotence-eth.github.io)
-
-*💭 God is the source code*
+**Tremayne Timms** · [GitHub](https://github.com/t-timms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/)
 
 </div>
