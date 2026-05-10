@@ -2,11 +2,11 @@
 
 # Tremayne Timms
 
-**LLM Systems Engineer** — Production Inference · Multi-Agent Orchestration · Edge Deployment
+**ML & AI Engineer** — Fine-Tuning · Agentic Systems · Edge Deployment · Production LLM Ops
 
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tremayne-t-/)
-[![GitHub](https://img.shields.io/github/followers/t-timms?style=for-the-badge&logo=github&label=Follow&color=2f80ed)](https://github.com/t-timms)
-[![Stars](https://img.shields.io/github/stars/t-timms?style=for-the-badge&logo=github&label=Stars&color=2f80ed)](https://github.com/t-timms?tab=repositories)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tremayne-t-/)
+[![GitHub followers](https://img.shields.io/github/followers/t-timms?style=flat-square&logo=github&label=Follow&color=2f80ed)](https://github.com/t-timms)
+[![GitHub stars](https://img.shields.io/github/stars/t-timms?style=flat-square&logo=github&label=Stars&color=2f80ed)](https://github.com/t-timms?tab=repositories)
 
 </div>
 
@@ -14,11 +14,9 @@
 
 ## About Me
 
-I build production LLM systems from the metal up — from quantized models running on Jetson edge hardware to multi-agent cloud deployments with tool-use, permission gating, and audit trails. I care about systems that are secure, measurable, and actually useful.
+I build production LLM systems from the metal up — from quantized models running on Jetson edge hardware to multi-agent cloud deployments with tool-use, permission gating, and audit trails. Currently focused on MoE fine-tuning (ZAYA1-8B), Blackwell-native FP4 quantization (NVFP4), and SOTA agentic coding benchmarks.
 
-Dallas-Fort Worth, TX
-
-**Core stack:** Python, Rust, PyTorch, CUDA, Docker, LiteLLM
+Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternational@gmail.com)
 
 [![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![Rust](https://img.shields.io/badge/-Rust-000000?style=flat-square&logo=rust&logoColor=white)](https://rust-lang.org)
@@ -31,72 +29,66 @@ Dallas-Fort Worth, TX
 
 ---
 
+## Current Focus (May 2026)
+
+| Project | What | Why It Matters |
+|---------|------|----------------|
+| **[zaya1-godspeed](https://github.com/t-timms/zaya1-godspeed)** | Fine-tuning ZAYA1-8B MoE for agentic tool calling | 760M active params matching 14B models — closing a deliberate gap Zyphra left in the tech report |
+| **[llama.cpp NVFP4](https://github.com/t-timms/llama.cpp-nvfp4)** | Blackwell-native FP4 quantization with MSE-optimal scales | First consumer NVFP4 tooling on RTX 5070 Ti — [PR #22897](https://github.com/ggml-org/llama.cpp/pull/22897) awaiting upstream review |
+
+---
+
 ## What I'm Building
 
-### [Godspeed](https://github.com/t-timms/godspeed-coding-agent) [![CI](https://img.shields.io/github/actions/workflow/status/t-timms/godspeed-coding-agent/ci.yml?style=flat-square&label=CI&logo=github)](https://github.com/t-timms/godspeed-coding-agent/actions/workflows/ci.yml) [![Coverage](https://img.shields.io/badge/coverage-81%25-success?style=flat-square)](https://github.com/t-timms/godspeed-coding-agent)
+### [Godspeed Coding Agent](https://github.com/t-timms/godspeed-coding-agent) [![CI](https://img.shields.io/github/actions/workflow/status/t-timms/godspeed-coding-agent/ci.yml?style=flat-square&label=CI)](https://github.com/t-timms/godspeed-coding-agent/actions/workflows/ci.yml) [![Coverage](https://img.shields.io/badge/coverage-81%25-success?style=flat-square)](https://github.com/t-timms/godspeed-coding-agent)
 
-Security-first open-source coding agent. Hand-rolled async ReAct loop with a 4-tier deny-first permission engine, SHA-256 hash-chained audit trail, and 200+ LLM providers via LiteLLM.
+Security-first open-source coding agent. Hand-rolled async ReAct loop with 4-tier deny-first permission engine, SHA-256 hash-chained audit trail, and 200+ LLM providers via LiteLLM. 854 tests.
 
-- 30+ built-in tools with JSON Schema validation, MCP server/client
+- 30+ built-in tools with JSON Schema validation, MCP server + client
 - Parallel + speculative tool dispatch, cost budget enforcement
-- Self-evolution via LLM-guided mutations, multi-language verify gate
-- **SWE-bench Lite: 52.2% oracle best-of-5**
+- Self-evolution via LLM-guided mutations, multi-language verify gate with retry
+- Training data export (openai/chatml/sharegpt), per-step reward annotations for GRPO
+- **SWE-bench Lite: 34.8% single-shot · 52.2% oracle best-of-5**
 
 ### [Sovereign Edge](https://github.com/t-timms/sovereign-edge)
 
-Autonomous multi-agent personal intelligence system running on NVIDIA Jetson hardware. Fully on-device inference — zero cloud dependencies, privacy-preserving by design.
+Autonomous multi-agent personal intelligence system on NVIDIA Jetson Orin Nano. 5 LangGraph expert agents, LiteLLM gateway (4 providers + Ollama), 3-tier ONNX intent router. 393 tests. Fully on-device — zero cloud dependencies.
 
 ### [Manna Trading](https://github.com/t-timms/manna-trading)
 
-Multi-agent algorithmic trading pipeline with DeepSeek R1 reasoning at every stage.
-
-- 4-agent pipeline: Technical Analysis → Chief Strategist → Risk Manager → Execution
-- Kelly Criterion position sizing, Monte Carlo risk simulation
-- Real-time WebSocket market data, paper trading integration
+Multi-agent algorithmic trading pipeline with DeepSeek R1 reasoning at every stage. 4-agent pipeline (TA → Chief → Risk → Execution), Kelly Criterion position sizing, Monte Carlo risk simulation, real-time WebSocket market data.
 
 ### [Bible AI Assistant](https://github.com/t-timms/bible-ai-assistant)
 
-Qwen3.5-4B fine-tuned with ORPO for biblical question-answering.
-
-- Hybrid RAG: dense embeddings + keyword search
-- Constitutional AI self-critique guardrails for theological accuracy
-- Voice pipeline: speech-to-text → LLM → text-to-speech
+Qwen3.5-4B fine-tuned with ORPO for biblical Q&A. Hybrid RAG (ChromaDB + BM25 + cross-encoder reranking), constitutional AI guardrails, voice pipeline (Whisper + Kokoro TTS), Gradio UI. 183 tests, 34 W&B runs, 5,925 training steps.
 
 ### [GPU Server Test Suite](https://github.com/t-timms/gpu-server-test-suite)
 
-Comprehensive GPU diagnostic toolkit modeled on NVIDIA DCGM architecture.
+Comprehensive GPU fleet validation modeled on NVIDIA DCGM. 16 diagnostic modules, Prometheus + Grafana, fault injection, JUnit XML for CI. 188 tests.
 
-- Automated stress testing, memory validation, ECC detection
-- Health monitoring for GPU server fleets
+### [ML Lab](https://github.com/t-timms/ml-lab)
 
-### [ML Experiment Scaffold](https://github.com/t-timms/ml-experiment-scaffold)
-
-Production-grade ML training infrastructure for single-GPU homelabs.
-
-- Unsloth fp8 quantization, torch.compile graph optimization
-- DeepSpeed ZeRO stages, vLLM + lm-eval harness
-- Multi-seed reporting for statistically sound results
-
-### [Manufacturing Quality Analytics](https://github.com/t-timms/manufacturing-quality-analytics)
-
-SQL + Python ETL pipeline for semiconductor quality analysis.
-
-- Supplier performance scoring with trend detection
-- Defect Pareto distributions, yield rate dashboards
-- Automated alerting on quality threshold breaches
-
-### [Tesla Tire Wear ML](https://github.com/t-timms/tesla-tire-wear-ml)
-
-Multi-model ML pipeline predicting tire wear for Tesla vehicles. Random Forest, XGBoost, Neural Network, and Ensemble models with Claude AI analysis for tire longevity insights.
-
-- Simulated driving data with vehicle-specific tire degradation modeling
-- GridSearch-tuned Random Forest, XGBoost, and TensorFlow/Keras neural network
-- Ensemble averaging across all models for robust predictions
-- Claude AI integration for natural language tire wear analysis
+ML research control plane — experiment lifecycle management, model registry, cloud training launcher. Orchestrates gpu-server-test-suite (preflight checks) and llm-wiki (knowledge persistence). 28 tests, v0.1.0.
 
 ### [LLM Wiki](https://github.com/t-timms/llm-wiki)
 
-Git-backed knowledge wiki — Karpathy's LLM Wiki pattern with LangGraph ingestion pipelines for structured and unstructured content. Full diff history.
+Git-backed knowledge base — Karpathy's LLM Wiki pattern. LangGraph ingest/query pipelines, instructor + Pydantic structured output, BM25 search, Groq → Gemini → Ollama fallback via LiteLLM. 117 tests, 40 wiki pages.
+
+### [Manufacturing Quality Analytics](https://github.com/t-timms/manufacturing-quality-analytics)
+
+SQL + Python ETL pipeline for semiconductor quality analysis — supplier performance scoring, defect Pareto distributions, yield trend analysis.
+
+### [Tesla Tire Wear ML](https://github.com/t-timms/tesla-tire-wear-ml)
+
+Multi-model ML pipeline for Tesla tire wear prediction. Random Forest, XGBoost, Neural Network ensemble with Claude AI integration.
+
+---
+
+## Open Source Contributions
+
+- **[llama.cpp #22897](https://github.com/ggml-org/llama.cpp/pull/22897)** — NVFP4 default type mapping + per-tensor scale tensors + MSE-optimal correction
+- **[llama.cpp #22858](https://github.com/ggml-org/llama.cpp/pull/22858)** — Missing `LLAMA_FTYPE_MOSTLY_NVFP4` case fix (closed, replaced by #22897)
+- **[Zyphra/ZAYA1-8B](https://huggingface.co/Zyphra/ZAYA1-8B)** — Agentic fine-tuning to complete the model's post-training (SFT + GRPO)
 
 ---
 
@@ -161,16 +153,19 @@ Git-backed knowledge wiki — Karpathy's LLM Wiki pattern with LangGraph ingesti
 
 | Area | Technologies |
 |------|-------------|
-| **LLMs & Agents** | LiteLLM, Claude/GPT/Gemini APIs, Ollama, llama.cpp, RAG, prompt engineering |
-| **ML Infrastructure** | PyTorch, Unsloth, DeepSpeed, vLLM, lm-eval, torch.compile, MLflow |
-| **Systems** | Python, Rust, TypeScript, CUDA, Docker, GitHub Actions |
-| **Edge / Hardware** | NVIDIA Jetson (Orin, Nano), RTX 5070 Ti, multi-GPU inference |
-| **Data** | PostgreSQL, SQL, pandas, SQLAlchemy, ETL pipelines |
+| **LLMs & Agents** | LiteLLM, 200+ providers, Ollama, llama.cpp, multi-agent orchestration, ReAct loops |
+| **Fine-Tuning** | Unsloth, TRL (SFT/DPO/GRPO/ORPO), QLoRA, PEFT, MoE architectures, RLHF/RLAIF |
+| **Inference** | vLLM (custom forks), speculative decoding (750 tok/s), TensorRT-LLM, EXL2 |
+| **Quantization** | NVFP4 (Blackwell-native), GGUF, EXL2, FP8, NF4, GPTQ, AWQ |
+| **ML Infrastructure** | PyTorch, CUDA 12.8, torch.compile, DeepSpeed, lm-eval, W&B, MLflow |
+| **Systems** | Python, Rust, TypeScript, Docker, GitHub Actions CI/CD, systemd |
+| **Edge / Hardware** | NVIDIA Jetson Orin Nano, RTX 5070 Ti (Blackwell sm_120), 16 GB VRAM optimization |
+| **Data** | PostgreSQL, SQL, pandas, SQLAlchemy, ChromaDB, LanceDB, BM25 |
 
 ---
 
 <div align="center">
 
-**Tremayne Timms** · [GitHub](https://github.com/t-timms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/)
+**Tremayne Timms** · [GitHub](https://github.com/t-timms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/) · [Email](mailto:ttimmsinternational@gmail.com)
 
 </div>
