@@ -14,7 +14,7 @@
 
 ## About Me
 
-I build production LLM systems from the metal up — from quantized models running on Jetson edge hardware to multi-agent cloud deployments with tool-use, permission gating, and audit trails. Currently focused on MoE fine-tuning (ZAYA1-8B), Blackwell-native FP4 quantization (NVFP4), and SOTA agentic coding benchmarks.
+I build production LLM systems from the metal up — from quantized models running on Jetson edge hardware to multi-agent cloud deployments with tool-use, permission gating, and audit trails. Currently focused on MoE fine-tuning, Blackwell-native FP4 quantization (NVFP4), and SOTA agentic coding benchmarks.
 
 Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternational@gmail.com)
 
@@ -33,7 +33,6 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 
 | Project | What | Why It Matters |
 |---------|------|----------------|
-| **[zaya1-godspeed](https://github.com/t-timms/zaya1-godspeed)** | Fine-tuning ZAYA1-8B MoE for agentic tool calling | 760M active params matching 14B models — closing a deliberate gap Zyphra left in the tech report |
 | **[llama.cpp NVFP4](https://github.com/t-timms/llama.cpp-nvfp4)** | Blackwell-native FP4 quantization with MSE-optimal scales | First consumer NVFP4 tooling on RTX 5070 Ti — [PR #22897](https://github.com/ggml-org/llama.cpp/pull/22897) awaiting upstream review |
 
 ---
@@ -88,7 +87,6 @@ Multi-model ML pipeline for Tesla tire wear prediction. Random Forest, XGBoost, 
 
 - **[llama.cpp #22897](https://github.com/ggml-org/llama.cpp/pull/22897)** — NVFP4 default type mapping + per-tensor scale tensors + MSE-optimal correction
 - **[llama.cpp #22858](https://github.com/ggml-org/llama.cpp/pull/22858)** — Missing `LLAMA_FTYPE_MOSTLY_NVFP4` case fix (closed, replaced by #22897)
-- **[Zyphra/ZAYA1-8B](https://huggingface.co/Zyphra/ZAYA1-8B)** — Agentic fine-tuning to complete the model's post-training (SFT + GRPO)
 
 ---
 
