@@ -29,19 +29,24 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 
 ---
 
-## Current Focus (May 2026)
+## Current Focus (July 2026)
 
 | Project | What | Why It Matters |
 |---------|------|----------------|
+| **[zaya1-godspeed](https://github.com/t-timms/zaya1-godspeed)** | NVFP4 W4A4 (4-bit weights *and* activations) serving for ZAYA1-8B MoE on consumer Blackwell SM120 | Custom vLLM CUTLASS source build — **102.6 tok/s single / 407 tok/s batch-8** in <6 GB VRAM on RTX 5070 Ti, plus s1-style budget-forced reasoning evals proving the checkpoint healthy (GPQA-Diamond 45.8% → 62.5% with reasoning budget) |
 | **[llama.cpp NVFP4](https://github.com/t-timms/llama.cpp-nvfp4)** | Blackwell-native FP4 quantization with MSE-optimal scales | First consumer NVFP4 tooling on RTX 5070 Ti — [PR #22897](https://github.com/ggml-org/llama.cpp/pull/22897) awaiting upstream review |
 
 ---
 
 ## What I'm Building
 
+### [ZAYA1 NVFP4 W4A4 on Blackwell](https://github.com/t-timms/zaya1-godspeed)
+
+End-to-end NVFP4 W4A4 quantization + serving for Zyphra's ZAYA1-8B (80-layer MoE + CCA attention) on a 16 GB RTX 5070 Ti. Rebuilt vLLM from source with SM120 CUTLASS FP4 kernels, wrote the layer-wise activation calibration, reverse-engineered the NVFP4 global-scale convention, and built budget-forced eval harnesses for reasoning models. 102.6 tok/s single-stream, 407.4 tok/s batch-8, 5.99 GB checkpoint.
+
 ### [Godspeed Coding Agent](https://github.com/t-timms/godspeed-coding-agent) [![CI](https://img.shields.io/github/actions/workflow/status/t-timms/godspeed-coding-agent/ci.yml?style=flat-square&label=CI)](https://github.com/t-timms/godspeed-coding-agent/actions/workflows/ci.yml) [![Coverage](https://img.shields.io/badge/coverage-81%25-success?style=flat-square)](https://github.com/t-timms/godspeed-coding-agent)
 
-Security-first open-source coding agent. Hand-rolled async ReAct loop with 4-tier deny-first permission engine, SHA-256 hash-chained audit trail, and 200+ LLM providers via LiteLLM. 854 tests.
+Security-first open-source coding agent. Hand-rolled async ReAct loop with 4-tier deny-first permission engine, SHA-256 hash-chained audit trail, and 200+ LLM providers via LiteLLM. 4,600+ tests.
 
 - 30+ built-in tools with JSON Schema validation, MCP server + client
 - Parallel + speculative tool dispatch, cost budget enforcement
