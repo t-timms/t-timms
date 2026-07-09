@@ -44,8 +44,7 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 
 End-to-end NVFP4 W4A4 quantization + serving for Zyphra's ZAYA1-8B (80-layer MoE + CCA attention) on a 16 GB RTX 5070 Ti. Rebuilt vLLM from source with SM120 CUTLASS FP4 kernels, wrote the layer-wise activation calibration, reverse-engineered the NVFP4 global-scale convention, and built budget-forced eval harnesses for reasoning models. 102.6 tok/s single-stream, 407.4 tok/s batch-8, 5.99 GB checkpoint.
 
-### [Godspeed Coding Agent](https://github.com/t-timms/godspeed-coding-agent) [![CI](https://img.shields.io/github/actions/workflow/status/t-timms/godspeed-coding-agent/ci.yml?style=flat-square&label=CI)](https://github.com/t-timms/godspeed-coding-agent/actions/workflows/ci.yml) [![Coverage](https://img.shields.io/badge/coverage-81%25-success?style=flat-square)](https://github.com/t-timms/godspeed-coding-agent)
-
+### [Godspeed Coding Agent](https://github.com/t-timms/godspeed-coding-agent) [![CI](https://img.shields.io/github/actions/workflow/status/t-timms/godspeed-coding-agent/ci.yml?style=flat-square&label=CI)](https://github.com/t-timms/godspeed-coding-agent/actions/workflows/ci.yml)
 Security-first open-source coding agent. Hand-rolled async ReAct loop with 4-tier deny-first permission engine, SHA-256 hash-chained audit trail, and 200+ LLM providers via LiteLLM. 4,600+ tests.
 
 - 30+ built-in tools with JSON Schema validation, MCP server + client
@@ -56,7 +55,7 @@ Security-first open-source coding agent. Hand-rolled async ReAct loop with 4-tie
 
 ### [Sovereign Edge](https://github.com/t-timms/sovereign-edge)
 
-Autonomous multi-agent personal intelligence system on NVIDIA Jetson Orin Nano. 5 LangGraph expert agents, LiteLLM gateway (4 providers + Ollama), 3-tier ONNX intent router. 393 tests. Fully on-device — zero cloud dependencies.
+Autonomous multi-agent personal intelligence system on NVIDIA Jetson Orin Nano. 5 LangGraph expert agents, LiteLLM gateway (4 providers + Ollama), 3-tier ONNX intent router. 415 tests. Fully on-device — zero cloud dependencies.
 
 ### [Manna Trading](https://github.com/t-timms/manna-trading)
 
@@ -72,7 +71,7 @@ Comprehensive GPU fleet validation modeled on NVIDIA DCGM. 16 diagnostic modules
 
 ### [ML Lab](https://github.com/t-timms/ml-lab)
 
-ML research control plane — experiment lifecycle management, model registry, cloud training launcher. Orchestrates gpu-server-test-suite (preflight checks) and llm-wiki (knowledge persistence). 28 tests, v0.1.0.
+ML research control plane — experiment lifecycle management, model registry, cloud training launcher. Orchestrates gpu-server-test-suite (preflight checks) and llm-wiki (knowledge persistence). 49 tests, v0.1.0.
 
 ### [LLM Wiki](https://github.com/t-timms/llm-wiki)
 
@@ -84,7 +83,7 @@ SQL + Python ETL pipeline for semiconductor quality analysis — supplier perfor
 
 ### [Tesla Tire Wear ML](https://github.com/t-timms/tesla-tire-wear-ml)
 
-Multi-model ML pipeline for Tesla tire wear prediction. Random Forest, XGBoost, Neural Network ensemble with Claude AI integration.
+Multi-model ML pipeline for Tesla tire wear prediction. Random Forest, XGBoost, Neural Network ensemble with LLM-assisted analysis of wear factors.
 
 ---
 
