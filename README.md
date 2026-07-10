@@ -14,7 +14,7 @@
 
 ## About Me
 
-I build production LLM systems from the metal up — from quantized models running on Jetson edge hardware to multi-agent cloud deployments with tool-use, permission gating, and audit trails. Currently focused on MoE fine-tuning, Blackwell-native FP4 quantization (NVFP4), and SOTA agentic coding benchmarks.
+I build production LLM systems from the metal up — from quantized models running on Jetson edge hardware to multi-agent cloud deployments with tool-use, permission gating, and audit trails. Currently focused on MoE fine-tuning, Blackwell-native FP4 quantization (NVFP4), and agentic coding benchmarks (SWE-bench).
 
 Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternational@gmail.com)
 
@@ -51,7 +51,7 @@ Security-first open-source coding agent. Hand-rolled async ReAct loop with 4-tie
 - Parallel + speculative tool dispatch, cost budget enforcement
 - Self-evolution via LLM-guided mutations, multi-language verify gate with retry
 - Training data export (openai/chatml/sharegpt), per-step reward annotations for GRPO
-- **SWE-bench Lite: 34.8% single-shot · 52.2% oracle best-of-5**
+- **SWE-bench Lite (dev-23 split): 34.8% single-shot · 52.2% oracle best-of-5** — free-tier drivers, $0 API spend; [methodology](https://github.com/t-timms/godspeed-coding-agent#benchmarks)
 
 ### [Sovereign Edge](https://github.com/t-timms/sovereign-edge)
 
