@@ -12,9 +12,9 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 <br>
 
 <picture>
-  <source srcset="https://skillicons.dev/icons?i=python,rust,ts,pytorch,docker,githubactions,postgres&theme=dark" media="(prefers-color-scheme: dark)" />
-  <source srcset="https://skillicons.dev/icons?i=python,rust,ts,pytorch,docker,githubactions,postgres" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-  <img src="https://skillicons.dev/icons?i=python,rust,ts,pytorch,docker,githubactions,postgres" alt="Python, Rust, TypeScript, PyTorch, Docker, GitHub Actions, PostgreSQL" />
+  <source srcset="https://skillicons.dev/icons?i=python%2Crust%2Cts%2Cpytorch%2Cdocker%2Cgithubactions%2Cpostgres&theme=dark" media="(prefers-color-scheme: dark)" />
+  <source srcset="https://skillicons.dev/icons?i=python%2Crust%2Cts%2Cpytorch%2Cdocker%2Cgithubactions%2Cpostgres" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+  <img src="https://skillicons.dev/icons?i=python%2Crust%2Cts%2Cpytorch%2Cdocker%2Cgithubactions%2Cpostgres" alt="Python, Rust, TypeScript, PyTorch, Docker, GitHub Actions, PostgreSQL" />
 </picture>
 
 </div>
