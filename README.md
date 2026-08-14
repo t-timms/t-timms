@@ -85,6 +85,10 @@ SQL + Python ETL pipeline for semiconductor quality analysis — supplier perfor
 
 Multi-model ML pipeline for Tesla tire wear prediction. Random Forest, XGBoost, Neural Network ensemble with LLM-assisted analysis of wear factors.
 
+### [ML Experiment Scaffold](https://github.com/t-timms/ml-experiment-scaffold)
+
+GitHub template repo for reproducible single-GPU ML experiments — config-driven training, `--dry-run` validation, VRAM profiling, W&B tracking, 3-seed statistical reporting. Covers LLM fine-tuning (SFT/ORPO/GRPO via Unsloth + TRL), vision (CNN/ViT), and tabular models. Built for RTX 5070 Ti (16 GB, Blackwell sm_120), works on any CUDA GPU.
+
 ---
 
 ## Open Source Contributions
