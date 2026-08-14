@@ -33,7 +33,7 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 
 | Project | What | Why It Matters |
 |---------|------|----------------|
-| **[zaya1-godspeed](https://github.com/t-timms/zaya1-godspeed)** | NVFP4 W4A4 (4-bit weights *and* activations) serving for ZAYA1-8B MoE on consumer Blackwell SM120 | Custom vLLM CUTLASS source build — **9.5 tok/s single / ~74 tok/s batch-8** (`enforce_eager`; an earlier 102.6/407 tok/s figure was measured under CUDA graphs, a path confirmed 2026-08-14 to corrupt output on this card and retracted — see repo for the root-cause writeup) in <6 GB VRAM on RTX 5070 Ti, plus s1-style budget-forced reasoning evals proving the checkpoint healthy (GPQA-Diamond 45.8% → 62.5% with reasoning budget) |
+| **[zaya1-godspeed](https://github.com/t-timms/zaya1-godspeed)** | NVFP4 W4A4 (4-bit weights *and* activations) serving for ZAYA1-8B MoE on consumer Blackwell SM120 | Custom vLLM CUTLASS source build — **9.5 tok/s single / ~74 tok/s batch-8** (`enforce_eager`; an earlier 102.6/407 tok/s figure was measured under CUDA graphs, a path confirmed 2026-08-14 to corrupt output on this card and retracted — see repo for the root-cause writeup), 6.02 GB checkpoint on RTX 5070 Ti, plus a validated **2.2× speedup from n-gram speculative decoding** on coding-edit workloads, plus s1-style budget-forced reasoning evals proving the checkpoint healthy (GPQA-Diamond 45.8% → 62.5% with reasoning budget) |
 | **[llama.cpp NVFP4](https://github.com/t-timms/llama.cpp-nvfp4)** | Blackwell-native FP4 quantization with MSE-optimal scales | First consumer NVFP4 tooling on RTX 5070 Ti — [PR #22897](https://github.com/ggml-org/llama.cpp/pull/22897) awaiting upstream review |
 
 ---
@@ -42,7 +42,7 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 
 ### [ZAYA1 NVFP4 W4A4 on Blackwell](https://github.com/t-timms/zaya1-godspeed)
 
-End-to-end NVFP4 W4A4 quantization + serving for Zyphra's ZAYA1-8B (80-layer MoE + CCA attention) on a 16 GB RTX 5070 Ti. Rebuilt vLLM from source with SM120 CUTLASS FP4 kernels, wrote the layer-wise activation calibration, reverse-engineered the NVFP4 global-scale convention, and built budget-forced eval harnesses for reasoning models. 9.5 tok/s single-stream, ~74 tok/s batch-8 (`enforce_eager=True` — CUDA graphs corrupt generation on this card regardless of MoE backend, see repo), 5.99 GB checkpoint.
+End-to-end NVFP4 W4A4 quantization + serving for Zyphra's ZAYA1-8B (80-layer MoE + CCA attention) on a 16 GB RTX 5070 Ti. Rebuilt vLLM from source with SM120 CUTLASS FP4 kernels, wrote the layer-wise activation calibration, reverse-engineered the NVFP4 global-scale convention, and built budget-forced eval harnesses for reasoning models. 9.5 tok/s single-stream, ~74 tok/s batch-8 (`enforce_eager=True` — CUDA graphs corrupt generation on this card regardless of MoE backend, see repo), 6.02 GB checkpoint. Also found and shipped a real batch-1 speedup: n-gram speculative decoding, validated 2.2× on coding-edit prompts, zero training required.
 
 ### [Godspeed Coding Agent](https://github.com/t-timms/godspeed-coding-agent) [![CI](https://img.shields.io/github/actions/workflow/status/t-timms/godspeed-coding-agent/ci.yml?style=flat-square&label=CI)](https://github.com/t-timms/godspeed-coding-agent/actions/workflows/ci.yml)
 Security-first open-source coding agent. Hand-rolled async ReAct loop with 4-tier deny-first permission engine, SHA-256 hash-chained audit trail, and 200+ LLM providers via LiteLLM. 4,600+ tests.
@@ -157,7 +157,7 @@ Multi-model ML pipeline for Tesla tire wear prediction. Random Forest, XGBoost, 
 |------|-------------|
 | **LLMs & Agents** | LiteLLM, 200+ providers, Ollama, llama.cpp, multi-agent orchestration, ReAct loops |
 | **Fine-Tuning** | Unsloth, TRL (SFT/DPO/GRPO/ORPO), QLoRA, PEFT, MoE architectures, RLHF/RLAIF |
-| **Inference** | vLLM (custom forks), speculative decoding (750 tok/s), TensorRT-LLM, EXL2 |
+| **Inference** | vLLM (custom forks), n-gram speculative decoding (2.2× validated), TensorRT-LLM, EXL2 |
 | **Quantization** | NVFP4 (Blackwell-native), GGUF, EXL2, FP8, NF4, GPTQ, AWQ |
 | **ML Infrastructure** | PyTorch, CUDA 12.8, torch.compile, DeepSpeed, lm-eval, W&B, MLflow |
 | **Systems** | Python, Rust, TypeScript, Docker, GitHub Actions CI/CD, systemd |
