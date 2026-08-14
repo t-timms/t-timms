@@ -31,10 +31,7 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 
 ## Current Focus (August 2026)
 
-| Project | What | Why It Matters |
-|---------|------|----------------|
-| **[zaya1-godspeed](https://github.com/t-timms/zaya1-godspeed)** | NVFP4 W4A4 (4-bit weights *and* activations) serving for ZAYA1-8B MoE on consumer Blackwell SM120 | Custom vLLM CUTLASS source build — **9.5 tok/s single / ~74 tok/s batch-8** (`enforce_eager`; an earlier 102.6/407 tok/s figure was measured under CUDA graphs, a path confirmed 2026-08-14 to corrupt output on this card and retracted — see repo for the root-cause writeup), 6.02 GB checkpoint on RTX 5070 Ti, plus a validated **2.2× speedup from n-gram speculative decoding** on coding-edit workloads, plus s1-style budget-forced reasoning evals proving the checkpoint healthy (GPQA-Diamond 45.8% → 62.5% with reasoning budget) |
-| **[llama.cpp NVFP4](https://github.com/t-timms/llama.cpp-nvfp4)** | Blackwell-native FP4 quantization with MSE-optimal scales | First consumer NVFP4 tooling on RTX 5070 Ti — [PR #22897](https://github.com/ggml-org/llama.cpp/pull/22897) awaiting upstream review |
+**[zaya1-godspeed](https://github.com/t-timms/zaya1-godspeed)** — NVFP4 W4A4 (4-bit weights *and* activations) serving for ZAYA1-8B MoE on consumer Blackwell SM120. Custom vLLM CUTLASS source build — **9.5 tok/s single / ~74 tok/s batch-8** (`enforce_eager`; an earlier 102.6/407 tok/s figure was measured under CUDA graphs, a path confirmed 2026-08-14 to corrupt output on this card and retracted — see repo for the root-cause writeup), 6.02 GB checkpoint on RTX 5070 Ti, plus a validated **2.2× speedup from n-gram speculative decoding** on coding-edit workloads, plus s1-style budget-forced reasoning evals proving the checkpoint healthy (GPQA-Diamond 45.8% → 62.5% with reasoning budget).
 
 ---
 
