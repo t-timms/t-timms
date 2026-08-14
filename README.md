@@ -29,11 +29,11 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 
 ---
 
-## Current Focus (July 2026)
+## Current Focus (August 2026)
 
 | Project | What | Why It Matters |
 |---------|------|----------------|
-| **[zaya1-godspeed](https://github.com/t-timms/zaya1-godspeed)** | NVFP4 W4A4 (4-bit weights *and* activations) serving for ZAYA1-8B MoE on consumer Blackwell SM120 | Custom vLLM CUTLASS source build — **102.6 tok/s single / 407 tok/s batch-8** in <6 GB VRAM on RTX 5070 Ti, plus s1-style budget-forced reasoning evals proving the checkpoint healthy (GPQA-Diamond 45.8% → 62.5% with reasoning budget) |
+| **[zaya1-godspeed](https://github.com/t-timms/zaya1-godspeed)** | NVFP4 W4A4 (4-bit weights *and* activations) serving for ZAYA1-8B MoE on consumer Blackwell SM120 | Custom vLLM CUTLASS source build — **9.5 tok/s single / ~74 tok/s batch-8** (`enforce_eager`; an earlier 102.6/407 tok/s figure was measured under CUDA graphs, a path confirmed 2026-08-14 to corrupt output on this card and retracted — see repo for the root-cause writeup) in <6 GB VRAM on RTX 5070 Ti, plus s1-style budget-forced reasoning evals proving the checkpoint healthy (GPQA-Diamond 45.8% → 62.5% with reasoning budget) |
 | **[llama.cpp NVFP4](https://github.com/t-timms/llama.cpp-nvfp4)** | Blackwell-native FP4 quantization with MSE-optimal scales | First consumer NVFP4 tooling on RTX 5070 Ti — [PR #22897](https://github.com/ggml-org/llama.cpp/pull/22897) awaiting upstream review |
 
 ---
@@ -42,7 +42,7 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 
 ### [ZAYA1 NVFP4 W4A4 on Blackwell](https://github.com/t-timms/zaya1-godspeed)
 
-End-to-end NVFP4 W4A4 quantization + serving for Zyphra's ZAYA1-8B (80-layer MoE + CCA attention) on a 16 GB RTX 5070 Ti. Rebuilt vLLM from source with SM120 CUTLASS FP4 kernels, wrote the layer-wise activation calibration, reverse-engineered the NVFP4 global-scale convention, and built budget-forced eval harnesses for reasoning models. 102.6 tok/s single-stream, 407.4 tok/s batch-8, 5.99 GB checkpoint.
+End-to-end NVFP4 W4A4 quantization + serving for Zyphra's ZAYA1-8B (80-layer MoE + CCA attention) on a 16 GB RTX 5070 Ti. Rebuilt vLLM from source with SM120 CUTLASS FP4 kernels, wrote the layer-wise activation calibration, reverse-engineered the NVFP4 global-scale convention, and built budget-forced eval harnesses for reasoning models. 9.5 tok/s single-stream, ~74 tok/s batch-8 (`enforce_eager=True` — CUDA graphs corrupt generation on this card regardless of MoE backend, see repo), 5.99 GB checkpoint.
 
 ### [Godspeed Coding Agent](https://github.com/t-timms/godspeed-coding-agent) [![CI](https://img.shields.io/github/actions/workflow/status/t-timms/godspeed-coding-agent/ci.yml?style=flat-square&label=CI)](https://github.com/t-timms/godspeed-coding-agent/actions/workflows/ci.yml)
 Security-first open-source coding agent. Hand-rolled async ReAct loop with 4-tier deny-first permission engine, SHA-256 hash-chained audit trail, and 200+ LLM providers via LiteLLM. 4,600+ tests.
@@ -89,7 +89,7 @@ Multi-model ML pipeline for Tesla tire wear prediction. Random Forest, XGBoost, 
 
 ## Open Source Contributions
 
-- **[llama.cpp #22897](https://github.com/ggml-org/llama.cpp/pull/22897)** — NVFP4 default type mapping + per-tensor scale tensors + MSE-optimal correction
+- **[llama.cpp #22897](https://github.com/ggml-org/llama.cpp/pull/22897)** — NVFP4 default type mapping + per-tensor scale tensors + MSE-optimal correction (open, awaiting upstream review)
 - **[llama.cpp #22858](https://github.com/ggml-org/llama.cpp/pull/22858)** — Missing `LLAMA_FTYPE_MOSTLY_NVFP4` case fix (closed, replaced by #22897)
 
 ---
