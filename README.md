@@ -55,7 +55,7 @@ Security-first open-source coding agent. Hand-rolled async ReAct loop with 4-tie
 
 ### [Sovereign Edge](https://github.com/t-timms/sovereign-edge)
 
-Autonomous multi-agent personal intelligence system on NVIDIA Jetson Orin Nano. 5 LangGraph expert agents, LiteLLM gateway (4 providers + Ollama), 3-tier ONNX intent router. 415 tests. Fully on-device — zero cloud dependencies.
+Autonomous multi-agent personal intelligence system on NVIDIA Jetson Orin Nano Super. 5 LangGraph expert agents, LiteLLM gateway (4 providers + Ollama), 3-tier ONNX intent router. 415 tests. Fully on-device — zero cloud dependencies.
 
 ### [Manna Trading](https://github.com/t-timms/manna-trading)
 
@@ -65,29 +65,14 @@ Multi-agent algorithmic trading pipeline with DeepSeek R1 reasoning at every sta
 
 Qwen3.5-4B fine-tuned with ORPO for biblical Q&A. Hybrid RAG (ChromaDB + BM25 + cross-encoder reranking), constitutional AI guardrails, voice pipeline (Whisper + Kokoro TTS), Gradio UI. 183 tests, 34 W&B runs, 5,925 training steps.
 
-### [GPU Server Test Suite](https://github.com/t-timms/gpu-server-test-suite)
+### More Projects
 
-Comprehensive GPU fleet validation modeled on NVIDIA DCGM. 16 diagnostic modules, Prometheus + Grafana, fault injection, JUnit XML for CI. 188 tests.
-
-### [ML Lab](https://github.com/t-timms/ml-lab)
-
-ML research control plane — experiment lifecycle management, model registry, cloud training launcher. Orchestrates gpu-server-test-suite (preflight checks) and llm-wiki (knowledge persistence). 49 tests, v0.1.0.
-
-### [LLM Wiki](https://github.com/t-timms/llm-wiki)
-
-Git-backed knowledge base — Karpathy's LLM Wiki pattern. LangGraph ingest/query pipelines, instructor + Pydantic structured output, BM25 search, Groq → Gemini → Ollama fallback via LiteLLM. 117 tests, 40 wiki pages.
-
-### [Manufacturing Quality Analytics](https://github.com/t-timms/manufacturing-quality-analytics)
-
-SQL + Python ETL pipeline for semiconductor quality analysis — supplier performance scoring, defect Pareto distributions, yield trend analysis.
-
-### [Tesla Tire Wear ML](https://github.com/t-timms/tesla-tire-wear-ml)
-
-Multi-model ML pipeline for Tesla tire wear prediction. Random Forest, XGBoost, Neural Network ensemble with LLM-assisted analysis of wear factors.
-
-### [ML Experiment Scaffold](https://github.com/t-timms/ml-experiment-scaffold)
-
-GitHub template repo for reproducible single-GPU ML experiments — config-driven training, `--dry-run` validation, VRAM profiling, W&B tracking, 3-seed statistical reporting. Covers LLM fine-tuning (SFT/ORPO/GRPO via Unsloth + TRL), vision (CNN/ViT), and tabular models. Built for RTX 5070 Ti (16 GB, Blackwell sm_120), works on any CUDA GPU.
+- **[GPU Server Test Suite](https://github.com/t-timms/gpu-server-test-suite)** — GPU fleet validation modeled on NVIDIA DCGM, Prometheus + Grafana dashboards. 188 tests.
+- **[ML Lab](https://github.com/t-timms/ml-lab)** — Experiment lifecycle control plane, orchestrates gpu-server-test-suite and llm-wiki. 49 tests.
+- **[LLM Wiki](https://github.com/t-timms/llm-wiki)** — Git-backed knowledge base, LangGraph ingest/query pipelines, BM25 search. 117 tests.
+- **[ML Experiment Scaffold](https://github.com/t-timms/ml-experiment-scaffold)** — GitHub template for reproducible single-GPU ML experiments (config-driven, 3-seed reporting).
+- **[Manufacturing Quality Analytics](https://github.com/t-timms/manufacturing-quality-analytics)** — SQL + Python ETL for semiconductor quality analysis.
+- **[Tesla Tire Wear ML](https://github.com/t-timms/tesla-tire-wear-ml)** — Multi-model ensemble for tire wear prediction.
 
 ---
 
@@ -101,29 +86,6 @@ GitHub template repo for reproducible single-GPU ML experiments — config-drive
 ## GitHub Activity
 
 <div align="center">
-  <picture>
-    <source
-      srcset="https://github-readme-stats.vercel.app/api?username=t-timms&show_icons=true&include_all_commits=true&count_private=true&theme=github_dark&hide_border=true&title_color=2f80ed&icon_color=2f80ed"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats.vercel.app/api?username=t-timms&show_icons=true&include_all_commits=true&count_private=true&theme=default&hide_border=true"
-      media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-    />
-    <img height="180" src="https://github-readme-stats.vercel.app/api?username=t-timms&show_icons=true&include_all_commits=true&count_private=true&theme=default&hide_border=true" />
-  </picture>
-  <picture>
-    <source
-      srcset="https://github-readme-stats.vercel.app/api/top-langs?username=t-timms&layout=compact&langs_count=8&theme=github_dark&hide_border=true&title_color=2f80ed&text_color=8b949e"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats.vercel.app/api/top-langs?username=t-timms&layout=compact&langs_count=8&theme=default&hide_border=true"
-      media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-    />
-    <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs?username=t-timms&layout=compact&langs_count=8&theme=default&hide_border=true" />
-  </picture>
-  <br />
   <picture>
     <source
       srcset="https://streak-stats.demolab.com/?user=t-timms&theme=github-dark-blue&hide_border=true"
@@ -165,7 +127,7 @@ GitHub template repo for reproducible single-GPU ML experiments — config-drive
 | **Quantization** | NVFP4 (Blackwell-native), GGUF, EXL2, FP8, NF4, GPTQ, AWQ |
 | **ML Infrastructure** | PyTorch, CUDA 12.8, torch.compile, DeepSpeed, lm-eval, W&B, MLflow |
 | **Systems** | Python, Rust, TypeScript, Docker, GitHub Actions CI/CD, systemd |
-| **Edge / Hardware** | NVIDIA Jetson Orin Nano, RTX 5070 Ti (Blackwell sm_120), 16 GB VRAM optimization |
+| **Edge / Hardware** | NVIDIA Jetson Orin Nano Super, RTX 5070 Ti (Blackwell sm_120), 16 GB VRAM optimization |
 | **Data** | PostgreSQL, SQL, pandas, SQLAlchemy, ChromaDB, LanceDB, BM25 |
 
 ---
