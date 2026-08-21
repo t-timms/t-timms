@@ -4,7 +4,7 @@
 
 **ML & AI Engineer** — Fine-Tuning · Agentic Systems · Edge Deployment · Production LLM Ops
 
-Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternational@gmail.com)
+Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternational@gmail.com) · [Portfolio](https://t-timms.github.io)
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tremayne-t-/)
 [![GitHub followers](https://img.shields.io/github/followers/t-timms?style=flat-square&logo=github&label=Follow&color=2f80ed)](https://github.com/t-timms)
@@ -12,12 +12,22 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 <br>
 
 <picture>
-  <source srcset="https://skillicons.dev/icons?i=python%2Crust%2Cts%2Cpytorch%2Cdocker%2Cgithubactions%2Cpostgres&theme=dark" media="(prefers-color-scheme: dark)" />
-  <source srcset="https://skillicons.dev/icons?i=python%2Crust%2Cts%2Cpytorch%2Cdocker%2Cgithubactions%2Cpostgres" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-  <img src="https://skillicons.dev/icons?i=python%2Crust%2Cts%2Cpytorch%2Cdocker%2Cgithubactions%2Cpostgres" alt="Python, Rust, TypeScript, PyTorch, Docker, GitHub Actions, PostgreSQL" />
+  <source srcset="https://skillicons.dev/icons?i=python%2Cts%2Cpytorch%2Cdocker%2Cgithubactions%2Cpostgres&theme=dark" media="(prefers-color-scheme: dark)" />
+  <source srcset="https://skillicons.dev/icons?i=python%2Cts%2Cpytorch%2Cdocker%2Cgithubactions%2Cpostgres" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+  <img src="https://skillicons.dev/icons?i=python%2Cts%2Cpytorch%2Cdocker%2Cgithubactions%2Cpostgres" alt="Python, TypeScript, PyTorch, Docker, GitHub Actions, PostgreSQL" />
 </picture>
 
 </div>
+
+---
+
+## Highlights
+
+[![SWE-bench Lite](https://img.shields.io/badge/SWE--bench_Lite-34.8%25_single--shot_·_52.2%25_oracle_b5-2f80ed?style=flat-square)](https://github.com/t-timms/godspeed-coding-agent#benchmarks)
+[![NVFP4 W4A4](https://img.shields.io/badge/NVFP4_W4A4_serving-9.5_tok%2Fs_·_~74_batch--8-2f80ed?style=flat-square)](https://github.com/t-timms/zaya1-godspeed)
+[![Speculative decoding](https://img.shields.io/badge/n--gram_spec_decode-2.2×_validated-2f80ed?style=flat-square)](https://github.com/t-timms/zaya1-godspeed)
+[![Tests](https://img.shields.io/badge/tests_across_projects-5%2C500%2B_passing-2f80ed?style=flat-square)](https://github.com/t-timms/godspeed-coding-agent)
+[![Upstream](https://img.shields.io/badge/llama.cpp-NVFP4_PR_open_upstream-2f80ed?style=flat-square)](https://github.com/ggml-org/llama.cpp/pull/22897)
 
 ---
 
@@ -25,28 +35,29 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 
 I build production LLM systems from the metal up — from quantized models running on Jetson edge hardware to multi-agent cloud deployments with tool-use, permission gating, and audit trails. Currently focused on MoE fine-tuning, Blackwell-native FP4 quantization (NVFP4), and agentic coding benchmarks (SWE-bench).
 
----
-
-## Current Focus (August 2026)
-
-**[zaya1-godspeed](https://github.com/t-timms/zaya1-godspeed)** — NVFP4 W4A4 (4-bit weights *and* activations) serving for ZAYA1-8B MoE on consumer Blackwell SM120. Custom vLLM CUTLASS source build — **9.5 tok/s single / ~74 tok/s batch-8** (`enforce_eager`; an earlier 102.6/407 tok/s figure was measured under CUDA graphs, a path confirmed 2026-08-14 to corrupt output on this card and retracted — see repo for the root-cause writeup), 6.02 GB checkpoint on RTX 5070 Ti, plus a validated **2.2× speedup from n-gram speculative decoding** on coding-edit workloads, plus s1-style budget-forced reasoning evals proving the checkpoint healthy (GPQA-Diamond 45.8% → 62.5% with reasoning budget).
+*Open to ML Engineer roles — DFW or remote.*
 
 ---
 
 ## What I'm Building
 
-### [ZAYA1 NVFP4 W4A4 on Blackwell](https://github.com/t-timms/zaya1-godspeed)
-
-End-to-end NVFP4 W4A4 quantization + serving for Zyphra's ZAYA1-8B (80-layer MoE + CCA attention) on a 16 GB RTX 5070 Ti. Rebuilt vLLM from source with SM120 CUTLASS FP4 kernels, wrote the layer-wise activation calibration, reverse-engineered the NVFP4 global-scale convention, and built budget-forced eval harnesses for reasoning models. 9.5 tok/s single-stream, ~74 tok/s batch-8 (`enforce_eager=True` — CUDA graphs corrupt generation on this card regardless of MoE backend, see repo), 6.02 GB checkpoint. Also found and shipped a real batch-1 speedup: n-gram speculative decoding, validated 2.2× on coding-edit prompts, zero training required.
-
 ### [Godspeed Coding Agent](https://github.com/t-timms/godspeed-coding-agent) [![CI](https://img.shields.io/github/actions/workflow/status/t-timms/godspeed-coding-agent/ci.yml?style=flat-square&label=CI)](https://github.com/t-timms/godspeed-coding-agent/actions/workflows/ci.yml)
+
 Security-first open-source coding agent. Hand-rolled async ReAct loop with 4-tier deny-first permission engine, SHA-256 hash-chained audit trail, and 200+ LLM providers via LiteLLM. 4,600+ tests.
 
+- **SWE-bench Lite (dev-23 split): 34.8% single-shot · 52.2% oracle best-of-5** — free-tier drivers, $0 API spend; [methodology](https://github.com/t-timms/godspeed-coding-agent#benchmarks)
 - 30+ built-in tools with JSON Schema validation, MCP server + client
 - Parallel + speculative tool dispatch, cost budget enforcement
 - Self-evolution via LLM-guided mutations, multi-language verify gate with retry
 - Training data export (openai/chatml/sharegpt), per-step reward annotations for GRPO
-- **SWE-bench Lite (dev-23 split): 34.8% single-shot · 52.2% oracle best-of-5** — free-tier drivers, $0 API spend; [methodology](https://github.com/t-timms/godspeed-coding-agent#benchmarks)
+
+### [ZAYA1 NVFP4 W4A4 on Blackwell](https://github.com/t-timms/zaya1-godspeed)
+
+End-to-end NVFP4 W4A4 quantization + serving for Zyphra's ZAYA1-8B (80-layer MoE + CCA attention) on a 16 GB RTX 5070 Ti. Rebuilt vLLM from source with SM120 CUTLASS FP4 kernels, wrote the layer-wise activation calibration, and reverse-engineered the NVFP4 global-scale convention.
+
+- **9.5 tok/s single-stream · ~74 tok/s batch-8** (`enforce_eager=True`), 6.02 GB checkpoint
+- **n-gram speculative decoding: validated 2.2× speedup** on coding-edit prompts, zero training required
+- Budget-forced reasoning evals proving checkpoint health: GPQA-Diamond 45.8% → 62.5% with reasoning budget
 
 ### [Sovereign Edge](https://github.com/t-timms/sovereign-edge)
 
@@ -118,10 +129,10 @@ Qwen3.5-4B fine-tuned with ORPO for biblical Q&A. Hybrid RAG (ChromaDB + BM25 + 
 |------|-------------|
 | **LLMs & Agents** | LiteLLM, 200+ providers, Ollama, llama.cpp, multi-agent orchestration, ReAct loops |
 | **Fine-Tuning** | Unsloth, TRL (SFT/DPO/GRPO/ORPO), QLoRA, PEFT, MoE architectures, RLHF/RLAIF |
-| **Inference** | vLLM (custom forks), n-gram speculative decoding (2.2× validated), TensorRT-LLM, EXL2 |
-| **Quantization** | NVFP4 (Blackwell-native), GGUF, EXL2, FP8, NF4, GPTQ, AWQ |
+| **Inference** | vLLM (custom CUTLASS builds), llama.cpp, n-gram speculative decoding (2.2× validated) |
+| **Quantization** | NVFP4 (Blackwell-native), GGUF, FP8, NF4, GPTQ, AWQ |
 | **ML Infrastructure** | PyTorch, CUDA 12.8, torch.compile, DeepSpeed, lm-eval, W&B, MLflow |
-| **Systems** | Python, Rust, TypeScript, Docker, GitHub Actions CI/CD, systemd |
+| **Systems** | Python, TypeScript, Docker, GitHub Actions CI/CD, systemd |
 | **Edge / Hardware** | NVIDIA Jetson Orin Nano Super, RTX 5070 Ti (Blackwell sm_120), 16 GB VRAM optimization |
 | **Data** | PostgreSQL, SQL, pandas, SQLAlchemy, ChromaDB, LanceDB, BM25 |
 
@@ -129,6 +140,6 @@ Qwen3.5-4B fine-tuned with ORPO for biblical Q&A. Hybrid RAG (ChromaDB + BM25 + 
 
 <div align="center">
 
-**Tremayne Timms** · [GitHub](https://github.com/t-timms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/) · [Email](mailto:ttimmsinternational@gmail.com)
+**Tremayne Timms** · [Portfolio](https://t-timms.github.io) · [GitHub](https://github.com/t-timms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/) · [Email](mailto:ttimmsinternational@gmail.com)
 
 </div>
