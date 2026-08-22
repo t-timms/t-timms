@@ -21,7 +21,7 @@ I quantize and serve large models on hardware that isn't supposed to run them �
 
 ## Projects
 
-**[MoE Pruning + NVFP4](https://github.com/t-timms/moe-pruning-nvfp4)** — A 50%-expert-pruned MoE coder model, quantized to fit 16 GB VRAM. SWE-bench Verified 52.0% (26/50, officially graded), HumanEval+/MBPP+ reproduced inside published confidence intervals, CI-checked reproduction pipeline. [Model on Hugging Face →](https://huggingface.co/Ttimms/KAT-Coder-V2.5-Dev-REAP-50-NVFP4A16)
+**[MoE Pruning + NVFP4](https://github.com/t-timms/kat-coder-nvfp4)** — A 50%-expert-pruned MoE coder model, quantized to fit 16 GB VRAM. SWE-bench Verified 52.0% (26/50, officially graded), HumanEval+/MBPP+ reproduced inside published confidence intervals, CI-checked reproduction pipeline. [Model on Hugging Face →](https://huggingface.co/Ttimms/KAT-Coder-V2.5-Dev-REAP-50-NVFP4A16)
 
 **[ZAYA1 NVFP4 W4A4](https://github.com/t-timms/zaya1-nvfp4-w4a4)** — 4-bit weights *and* activations on native Blackwell tensor cores: 9.5 tok/s single-stream from a 6.02 GB checkpoint, 2,100+ combined downloads on Hugging Face. Includes a benchmark I retracted and corrected in public once I found the CUDA-graph path corrupting output. [Model on Hugging Face →](https://huggingface.co/Ttimms/zaya1-8b-nvfp4-w4a4)
 
