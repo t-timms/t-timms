@@ -4,7 +4,7 @@
 
 **ML Engineer** — LLM quantization & inference on consumer hardware
 
-Dallas–Fort Worth, TX · [Portfolio](https://t-timms.github.io) · [Hugging Face](https://huggingface.co/Ttimms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/) · [Email](mailto:ttimmsinternational@gmail.com)
+Dallas–Fort Worth, TX · [Portfolio](https://t-timms.github.io) · [Hugging Face](https://huggingface.co/Ttimms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/) · [ttimmsinternational@gmail.com](mailto:ttimmsinternational@gmail.com)
 
 <picture>
   <source srcset="https://skillicons.dev/icons?i=python%2Cpytorch%2Cdocker%2Cgithubactions%2Cts%2Cpostgres&theme=dark" media="(prefers-color-scheme: dark)" />
@@ -39,6 +39,6 @@ Python · PyTorch · vLLM / CUTLASS · TRL / Unsloth · NVFP4 · GGUF · GPTQ / 
 
 <div align="center">
 
-[Portfolio](https://t-timms.github.io) · [GitHub](https://github.com/t-timms) · [Hugging Face](https://huggingface.co/Ttimms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/) · [Email](mailto:ttimmsinternational@gmail.com)
+[Portfolio](https://t-timms.github.io) · [Hugging Face](https://huggingface.co/Ttimms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/) · [ttimmsinternational@gmail.com](mailto:ttimmsinternational@gmail.com)
 
 </div>
