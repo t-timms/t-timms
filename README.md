@@ -23,6 +23,7 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 
 ## Highlights
 
+[![SWE-bench Verified](https://img.shields.io/badge/SWE--bench_Verified-52.0%25_(26%2F50)_officially_graded-2f80ed?style=flat-square)](https://github.com/t-timms/moe-pruning-nvfp4)
 [![SWE-bench Lite](https://img.shields.io/badge/SWE--bench_Lite-34.8%25_single--shot_·_52.2%25_oracle_b5-2f80ed?style=flat-square)](https://github.com/t-timms/godspeed-coding-agent#benchmarks)
 [![NVFP4 W4A4](https://img.shields.io/badge/NVFP4_W4A4_serving-9.5_tok%2Fs_·_~74_batch--8-2f80ed?style=flat-square)](https://github.com/t-timms/zaya1-godspeed)
 [![Speculative decoding](https://img.shields.io/badge/n--gram_spec_decode-2.2×_validated-2f80ed?style=flat-square)](https://github.com/t-timms/zaya1-godspeed)
@@ -40,6 +41,15 @@ I build production LLM systems from the metal up — from quantized models runni
 ---
 
 ## What I'm Building
+
+### [MoE Pruning + NVFP4 (KAT-Coder-V2.5)](https://github.com/t-timms/moe-pruning-nvfp4) [![CI](https://img.shields.io/github/actions/workflow/status/t-timms/moe-pruning-nvfp4/verify.yml?style=flat-square&label=CI)](https://github.com/t-timms/moe-pruning-nvfp4/actions)
+
+Serving a 50%-expert-pruned MoE coder model on a 16 GB consumer Blackwell GPU. REAP structured pruning + NVFP4A16 quantization, published on [Hugging Face](https://huggingface.co/Ttimms/KAT-Coder-V2.5-Dev-REAP-50-NVFP4A16) with a CI-checked reproduction pipeline.
+
+- **SWE-bench Verified: 52.0%** (26/50, officially graded) — traced the actual gain mechanism to a step-limit fix via raw-log re-derivation, and corrected the initial writeup when it attributed the gain to the wrong cause
+- **HumanEval+ 90.9%, MBPP+ 89.9%** reproduced on the shipped weights, both inside the published confidence interval
+- Lossless sharding verified via SHA-256 across all 47,013 tensors; found and fixed 0.83 GiB of untrained "phantom" tensors that survived quantization
+- `CITATION.cff`, automated repro-verification CI, and an HF model card kept byte-synced to the repo
 
 ### [Godspeed Coding Agent](https://github.com/t-timms/godspeed-coding-agent) [![CI](https://img.shields.io/github/actions/workflow/status/t-timms/godspeed-coding-agent/ci.yml?style=flat-square&label=CI)](https://github.com/t-timms/godspeed-coding-agent/actions/workflows/ci.yml)
 
@@ -63,22 +73,13 @@ End-to-end NVFP4 W4A4 quantization + serving for Zyphra's ZAYA1-8B (80-layer MoE
 
 Autonomous multi-agent personal intelligence system on NVIDIA Jetson Orin Nano Super. 5 LangGraph expert agents, LiteLLM gateway (4 providers + Ollama), 3-tier ONNX intent router. 415 tests. Fully on-device — zero cloud dependencies.
 
-### [Manna Trading](https://github.com/t-timms/manna-trading)
-
-Multi-agent algorithmic trading pipeline with DeepSeek R1 reasoning at every stage. 4-agent pipeline (TA → Chief → Risk → Execution), Kelly Criterion position sizing, Monte Carlo risk simulation, real-time WebSocket market data.
-
 ### [Bible AI Assistant](https://github.com/t-timms/bible-ai-assistant)
 
 Qwen3.5-4B fine-tuned with ORPO for biblical Q&A. Hybrid RAG (ChromaDB + BM25 + cross-encoder reranking), constitutional AI guardrails, voice pipeline (Whisper + Kokoro TTS), Gradio UI. 183 tests, 34 W&B runs, 5,925 training steps.
 
 ### More Projects
 
-- **[GPU Server Test Suite](https://github.com/t-timms/gpu-server-test-suite)** — GPU fleet validation modeled on NVIDIA DCGM, Prometheus + Grafana dashboards. 188 tests.
-- **[ML Lab](https://github.com/t-timms/ml-lab)** — Experiment lifecycle control plane, orchestrates gpu-server-test-suite and llm-wiki. 49 tests.
-- **[LLM Wiki](https://github.com/t-timms/llm-wiki)** — Git-backed knowledge base, LangGraph ingest/query pipelines, BM25 search. 117 tests.
-- **[ML Experiment Scaffold](https://github.com/t-timms/ml-experiment-scaffold)** — GitHub template for reproducible single-GPU ML experiments (config-driven, 3-seed reporting).
-- **[Manufacturing Quality Analytics](https://github.com/t-timms/manufacturing-quality-analytics)** — SQL + Python ETL for semiconductor quality analysis.
-- **[Tesla Tire Wear ML](https://github.com/t-timms/tesla-tire-wear-ml)** — Multi-model ensemble for tire wear prediction.
+- **[Manna Trading](https://github.com/t-timms/manna-trading)** — Multi-agent algorithmic trading pipeline with DeepSeek R1 reasoning at every stage (TA → Chief → Risk → Execution), Kelly Criterion sizing, Monte Carlo risk simulation.
 
 ---
 
