@@ -28,7 +28,7 @@ Dallas-Fort Worth, TX · [ttimmsinternational@gmail.com](mailto:ttimmsinternatio
 [![NVFP4 W4A4](https://img.shields.io/badge/NVFP4_W4A4_serving-9.5_tok%2Fs_·_~74_batch--8-2f80ed?style=flat-square)](https://github.com/t-timms/zaya1-godspeed)
 [![Speculative decoding](https://img.shields.io/badge/n--gram_spec_decode-2.2×_validated-2f80ed?style=flat-square)](https://github.com/t-timms/zaya1-godspeed)
 [![Tests](https://img.shields.io/badge/tests_across_projects-5%2C500%2B_passing-2f80ed?style=flat-square)](https://github.com/t-timms/godspeed-coding-agent)
-[![Upstream](https://img.shields.io/badge/llama.cpp-NVFP4_PR_open_upstream-2f80ed?style=flat-square)](https://github.com/ggml-org/llama.cpp/pull/22897)
+[![Upstream](https://img.shields.io/badge/llama.cpp-NVFP4_quantizer_fix_(open_PR)-2f80ed?style=flat-square)](https://github.com/ggml-org/llama.cpp/pull/22897)
 
 ---
 
@@ -85,8 +85,8 @@ Qwen3.5-4B fine-tuned with ORPO for biblical Q&A. Hybrid RAG (ChromaDB + BM25 + 
 
 ## Open Source Work
 
-- **[llama.cpp #22897](https://github.com/ggml-org/llama.cpp/pull/22897)** — NVFP4 default type mapping + per-tensor scale tensors + MSE-optimal correction (open, awaiting upstream review)
-- **[llama.cpp #22858](https://github.com/ggml-org/llama.cpp/pull/22858)** — Missing `LLAMA_FTYPE_MOSTLY_NVFP4` case fix (closed, replaced by #22897)
+- **[llama.cpp #22897](https://github.com/ggml-org/llama.cpp/pull/22897)** — fixes a `llama-quantize` crash on NVFP4 (missing type mapping) and adds `.scale`/`.input_scale` tensor emission with MSE-optimal correction. Open, not yet reviewed; maintainers have indicated full NVFP4 quantization support is out of scope for llama.cpp for now, so merge is unlikely near-term regardless of the fix's correctness
+- **[llama.cpp #22858](https://github.com/ggml-org/llama.cpp/pull/22858)** — earlier, partial version of the same fix (closed, superseded by #22897)
 
 ---
 
