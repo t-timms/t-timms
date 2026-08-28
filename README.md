@@ -7,8 +7,8 @@
 Dallas–Fort Worth, TX · [Portfolio](https://t-timms.github.io) · [Hugging Face](https://huggingface.co/Ttimms) · [LinkedIn](https://www.linkedin.com/in/tremayne-t-/) · [ttimmsinternational@gmail.com](mailto:ttimmsinternational@gmail.com)
 
 <picture>
-  <source srcset="https://skillicons.dev/icons?i=python%2Cpytorch%2Cdocker%2Cgithubactions%2Cts%2Cpostgres&theme=dark" media="(prefers-color-scheme: dark)" />
-  <img src="https://skillicons.dev/icons?i=python%2Cpytorch%2Cdocker%2Cgithubactions%2Cts%2Cpostgres" alt="Python, PyTorch, Docker, GitHub Actions, TypeScript, PostgreSQL" />
+  <source srcset="https://skillicons.dev/icons?i=python%2Cpytorch%2Ccpp%2Cdocker%2Cgithubactions%2Clinux&theme=dark" media="(prefers-color-scheme: dark)" />
+  <img src="https://skillicons.dev/icons?i=python%2Cpytorch%2Ccpp%2Cdocker%2Cgithubactions%2Clinux" alt="Python, PyTorch, C++, Docker, GitHub Actions, Linux" />
 </picture>
 
 </div>
@@ -17,7 +17,9 @@ Dallas–Fort Worth, TX · [Portfolio](https://t-timms.github.io) · [Hugging Fa
 
 I quantize and serve large models on hardware that isn't supposed to run them — 16 GB Blackwell GPUs, Jetson edge boards — and I reproduce every published number against its confidence interval before I call it done.
 
-*Open to ML Engineer roles — DFW or remote.*
+**8 models on Hugging Face · ~3,800 downloads/month.**
+
+*Open to ML Engineer roles (inference optimization, model compression, edge deployment) — DFW or remote.*
 
 ## Projects
 
