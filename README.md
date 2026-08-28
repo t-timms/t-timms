@@ -21,6 +21,8 @@ I quantize and serve large models on hardware that isn't supposed to run them �
 
 ## Projects
 
+**[Bible AI Assistant](https://github.com/t-timms/bible-ai-assistant)** — Domain LLM Q&A running entirely on one 16 GB Blackwell card: hybrid RAG (dense + BM25 + Reciprocal Rank Fusion + cross-encoder rerank over 31k verses) feeding an SFT → ORPO → GRPO fine-tune whose GRPO stage optimizes a *fully verifiable* reward — the cited verse must exist in the index and the quoted text must match — so training targets exactly what it's scored on. Versioned sha256-pinned benchmark protocol that discloses its own train/eval contamination; 430 tests, full CI/CD. Primary project — building toward local SOTA for Scripture Q&A on a 5070 Ti.
+
 **[MoE Pruning + NVFP4](https://github.com/t-timms/kat-coder-nvfp4)** — A 50%-expert-pruned MoE coder model, quantized to fit 16 GB VRAM. SWE-bench Verified 52.0% (26/50, officially graded), HumanEval+/MBPP+ reproduced inside published confidence intervals, CI-checked reproduction pipeline. [Model on Hugging Face →](https://huggingface.co/Ttimms/KAT-Coder-V2.5-Dev-REAP-50-NVFP4A16)
 
 **[ZAYA1 NVFP4 W4A4](https://github.com/t-timms/zaya1-nvfp4-w4a4)** — 4-bit weights *and* activations on native Blackwell tensor cores: 9.5 tok/s single-stream from a 6.02 GB checkpoint, 2,100+ combined downloads on Hugging Face. Includes a benchmark I retracted and corrected in public once I found the CUDA-graph path corrupting output. [Model on Hugging Face →](https://huggingface.co/Ttimms/zaya1-8b-nvfp4-w4a4)
@@ -29,7 +31,7 @@ I quantize and serve large models on hardware that isn't supposed to run them �
 
 **[Sovereign Edge](https://github.com/t-timms/sovereign-edge)** — Five-agent personal AI system running entirely on a Jetson Orin Nano — zero cloud dependencies.
 
-Also: [Bible AI Assistant](https://github.com/t-timms/bible-ai-assistant) (ORPO fine-tune + hybrid RAG) · [Manna Trading](https://github.com/t-timms/manna-trading) (multi-agent trading pipeline) · an [open llama.cpp PR](https://github.com/ggml-org/llama.cpp/pull/22897) fixing an NVFP4 quantizer crash
+Also: [Manna Trading](https://github.com/t-timms/manna-trading) (multi-agent trading pipeline) · an [open llama.cpp PR](https://github.com/ggml-org/llama.cpp/pull/22897) fixing an NVFP4 quantizer crash
 
 ## Stack
 
