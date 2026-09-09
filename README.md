@@ -17,7 +17,7 @@ Dallas–Fort Worth, TX · [Portfolio](https://t-timms.github.io) · [Hugging Fa
 
 I quantize and serve large models on hardware that isn't supposed to run them — 16 GB Blackwell GPUs, Jetson edge boards — and I reproduce every published number against its confidence interval before I call it done.
 
-**15 models on Hugging Face · ~7,800 downloads/month** *(Sept 2026)*.
+**16 models on Hugging Face · ~16,700 downloads/month** *(as of Sept 2026)*.
 
 *Open to ML Engineer roles (inference optimization, model compression, edge deployment) — DFW or remote.*
 
@@ -29,7 +29,7 @@ I quantize and serve large models on hardware that isn't supposed to run them �
 
 **[Ornith REAP-50 + NVFP4](https://github.com/t-timms/ornith-nvfp4)** — Same pipeline on a different 35B-A3B MoE base (MIT): 256→128 experts, MTP head and vision tower stripped, GPTQ-NVFP4A16 — 12.47 GiB. SWE-bench Verified 44.0% (22/50, official harness, same 50-instance slice as the KAT run), HumanEval+ 84.2% / MBPP+ 89.2%. Three upstream vLLM gaps for this architecture patched locally. [Model on Hugging Face →](https://huggingface.co/Ttimms/Ornith-1.5-35B-A3B-REAP-50-NVFP4A16)
 
-**[ZAYA1 NVFP4 W4A4](https://github.com/t-timms/zaya1-nvfp4-w4a4)** — 4-bit weights *and* activations on native Blackwell tensor cores: 9.5 tok/s single-stream from a 6.02 GB checkpoint, 2,400+ combined downloads on Hugging Face (Sept 2026). Includes a benchmark I retracted and corrected in public once I found the CUDA-graph path corrupting output. [Model on Hugging Face →](https://huggingface.co/Ttimms/zaya1-8b-nvfp4-w4a4)
+**[ZAYA1 NVFP4 W4A4](https://github.com/t-timms/zaya1-nvfp4-w4a4)** — 4-bit weights *and* activations on native Blackwell tensor cores: 9.5 tok/s single-stream from a 6.02 GB checkpoint, 3,700+ combined downloads on Hugging Face (Sept 2026). Includes a benchmark I retracted and corrected in public once I found the CUDA-graph path corrupting output. [Model on Hugging Face →](https://huggingface.co/Ttimms/zaya1-8b-nvfp4-w4a4)
 
 **[Godspeed Coding Agent](https://github.com/t-timms/godspeed-coding-agent)** — A coding agent built from scratch: deny-first permission engine, SHA-256 hash-chained audit trail. SWE-bench Lite 34.8% single-shot / 52.2% oracle best-of-5, $0 API spend.
 
