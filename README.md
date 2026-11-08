@@ -17,7 +17,7 @@ Dallas–Fort Worth, TX · [Portfolio](https://t-timms.github.io) · [Hugging Fa
 
 I quantize and serve large models on hardware that isn't supposed to run them — 16 GB Blackwell GPUs, Jetson edge boards — and I reproduce every published number against its confidence interval before I call it done.
 
-**16 models on Hugging Face · ~16,700 downloads/month** *(as of Sept 2026)*.
+**19 models on Hugging Face · ~10,100 downloads in the last 30 days** *(as of Nov 7, 2026)*.
 
 *Open to ML Engineer roles (inference optimization, model compression, edge deployment) — DFW or remote.*
 
@@ -35,7 +35,7 @@ I quantize and serve large models on hardware that isn't supposed to run them �
 
 **[Sovereign Edge](https://github.com/t-timms/sovereign-edge)** — Five-agent personal AI system running entirely on a Jetson Orin Nano — zero cloud dependencies.
 
-Also: [Manna Trading](https://github.com/t-timms/manna-trading) (multi-agent trading pipeline) · an [open llama.cpp PR](https://github.com/ggml-org/llama.cpp/pull/22897) fixing an NVFP4 quantizer crash
+Also: [Manna Trading](https://github.com/t-timms/manna-trading) (multi-agent trading pipeline) · a [llama.cpp PR](https://github.com/ggml-org/llama.cpp/pull/22897) fixing an NVFP4 quantizer crash (I closed it in favour of the broader open PR [#25153](https://github.com/ggml-org/llama.cpp/pull/25153), which covers the same fix)
 
 ## Stack
 
